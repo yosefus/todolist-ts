@@ -1,3 +1,15 @@
+hii there!
+
+welcome to my to do list project,
+little and simple ts app - using scss, react icons, typeScript, react.
+and save your list on your browser.
+
+have fun here!
+
+[my website:](https://yosefus-portfolio.netlify.app/)
+
+yosefus
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
