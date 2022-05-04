@@ -48,6 +48,9 @@ const Main: FC = () => {
 
          <div className={styles.main}>
             <ul>
+               {!todolist.length &&
+                  <li className={styles.msg}>don't you have something to do???</li>
+               }
                {todolist.sort((a, b) => a.done ? 1 : -1).map((t: ITask) =>
                   <ListItem
                      t={t}
@@ -58,7 +61,7 @@ const Main: FC = () => {
          </div>
 
          <div className={styles.btnsBox}>
-            <BtnsBox handleDeleteAll={handleDeleteAll} handleDidAll={handleDidAll} />
+            <BtnsBox len={todolist.length} handleDeleteAll={handleDeleteAll} handleDidAll={handleDidAll} />
          </div>
 
       </div>

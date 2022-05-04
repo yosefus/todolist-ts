@@ -11,6 +11,12 @@
    padding: 3rem .6rem;
 }
 
+h1 {
+   width: 100%;
+   text-align: center;
+   margin-bottom: 1rem;
+}
+
 
 .header {
    @extend .d-f-center;
@@ -34,18 +40,23 @@
       }
 
       button[type=submit] {
+         @extend .d-f-center;
          border: none;
-         padding: .3rem .8rem;
          cursor: pointer;
          background-color: transparent;
-         border: #fff 1px solid;
          color: #fff;
-         transition: all ease-in-out .2s;
+         padding-left: .5rem;
+
+         svg {
+            font-size: 1.6rem;
+            transition: all ease-in-out .2s;
+         }
+
+         svg:hover {
+            transform: scale(1.2);
+         }
       }
 
-      button:hover {
-         transform: scale(1.05);
-      }
    }
 }
 
@@ -69,6 +80,14 @@
          transform: scale(0.9)
       }
    }
+
+   button:disabled {
+      opacity: .5;
+
+      &:hover {
+         transform: scale(1)
+      }
+   }
 }
 
 .main {
@@ -90,6 +109,19 @@
          @extend .bg;
          display: flex;
          justify-content: space-between;
+         align-items: center;
+         letter-spacing: .8px;
+
+         svg {
+            font-size: 1.1rem;
+         }
+
+         &.msg {
+            text-transform: capitalize;
+            border-radius: 0 !important;
+            padding: 2rem;
+            margin-bottom: 1rem;
+         }
 
          &:last-child {
             border-bottom-left-radius: 10px;
